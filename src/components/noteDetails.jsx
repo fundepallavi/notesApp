@@ -15,7 +15,7 @@ class noteDetails extends Component {
     this.state = {
       title: "",
       content: "",
-      showForm : 'false'
+      showForm : 'false',
     };
   }
 
@@ -37,7 +37,7 @@ class noteDetails extends Component {
     this.props.addNotes(this.state.title, this.state.content);
   };
 
-  render() { console.log("oo", this.props)
+  render() { console.log("oo", this.state)
     const show = this.state.showForm;
     return (
       <div className="container page">
@@ -46,11 +46,12 @@ class noteDetails extends Component {
       <div className="split left">
         <List notes={this.props.allNotes} />
       </div>
+      <div class="divider"></div>
        
       <div className="split right">
       <Row>
         <Col style={{marginTop : '40px'}}>
-          <Button variant="outline-secondary" style={{float: 'right', marginRight: '20px'}} variant="primary" onClick={this.addNotes}> + Add Note</Button>
+          <Button variant="outline-secondary" style={{float: 'right', marginRight: '20px'}}  onClick={this.addNotes}> + Add Note</Button>
         </Col>
       </Row>
       <br />
@@ -66,7 +67,7 @@ class noteDetails extends Component {
             placeholder="Add title"
             name="title"
             required
-            style={{width : '80%' }}
+            style={{width : '97%' }}
           />
           <br />
           <br />
@@ -79,12 +80,12 @@ class noteDetails extends Component {
             placeholder="Add content"
             name="content"
             required
-            style={{width : '80%' }}
+            style={{width : '97%' }}
             rows="8"
           />
           <br />
           <br />
-          <Button type="submit">Save</Button>
+          <Button style={{float : 'right' , marginRight : '20px'}} type="submit">Save</Button>
         </form>
           }
          </div>

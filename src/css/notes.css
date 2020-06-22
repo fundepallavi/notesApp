@@ -17,3 +17,11 @@
     right: 0;
      
   }
+
+  .divider{
+    position:absolute;
+    left:45%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid gray;
+}
